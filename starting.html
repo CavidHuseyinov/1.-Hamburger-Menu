@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menu</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Lato'sans-serif;
+        }
+
+        .zemin {
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: -100wh;
+            background: rgba(0, 0, 0, .9);
+            overflow-x: hidden;
+            transition: .5s;
+        }
+
+        .zemin-icerik {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+        }
+
+        .zemin a {
+            display: block;
+            padding: 8px;
+            text-decoration: none;
+            color: #818181;
+            transition: .4s;
+            font-size: 36px;
+            border-top: solid 2px rgba(241, 241, 241, 0);
+            border-bottom: solid 2px rgba(241, 241, 241, 0);
+        }
+
+        .zemin-icerik a:hover,
+        .zemin-icerik a:focus {
+            color: #f1f1f1;
+            border-top: 2px solid #f1f1f1;
+            border-bottom: 2px solid #f1f1f1;
+            background: #b71540;
+        }
+
+        .zemin .kapatBtn {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            font-size: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="menu" class="zemin">
+        <a href="#" class="kapatBtn" id="kapatBtn">&times</a>
+        <div class="zemin-icerik">
+            <a href="#">Anasayfa</a>
+            <a href="#">Ürünler</a>
+            <a href="#">Hizmetler</a>
+            <a href="#">İletişim</a>
+        </div>
+    </div>
+    <span id="menuAc">☰ Menü</span>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur fugit quod odio nisi sapiente consectetur
+        aliquam quis officia blanditiis, adipisci, repellendus neque quasi sit. Molestias, adipisci dolorem.
+        Et eaque a voluptas, quis repellat quidem debitis eligendi reprehenderit corrupti, nostrum animi
+        exercitationem
+        uam? Assumenda in inventore earum neque? Laboriosam error in, quod, earum dolorem esse neque minima optio a
+        illum id dignissimos numquam similique tempora commodi. Quis aspernatur placeat voluptatum! Quisquam, animi.
+        Velit quod suscipit culpa ea sint vitae commodi maxime quis neque aliquid, iste laudantium vero ratione unde
+        rerum magni aperiam? Ad vero voluptatibus ea error deleniti ratione. Voluptatem quas recusandae sint ducimus
+        eaque et, dolorum aspernatur illum delectus maiores aut, ab natus, suscipit praesentium velit placeat?
+        Velit ducimus quis consequuntur error inventore deleniti sed eligendi exercitationem rerum, reiciendis eiusa
+        speriores quo odit quae maiores laudantium dignissimos minus eaque optio consequatur dicta id cupiditate,
+        natus qui. Facilis incidunt consequatur facere!
+    </p>
+    <script>
+        var menuAc = document.querySelector("#menuAc");
+        var menu = document.querySelector("#menu");
+        var kapatBtn = document.querySelector("#kapatBtn");
+
+        menuAc.addEventListener("click", function () {
+            menu.style.left = "0vw";
+        });
+
+        kapatBtn.addEventListener("click", function () {
+            menu.style.left = "-100vw";
+        });
+    </script>
+</body>
+
+
+</html>
